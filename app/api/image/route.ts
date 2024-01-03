@@ -6,7 +6,7 @@ import { checkApiLimit, incrementApiCount } from "@/lib/api-limit";
  
 
 
-export const getImagesFromPrompt = async (prompt: string, value: number, resolution: string) => {
+const getImagesFromPrompt = async (prompt: string, value: number, resolution: string) => {
     const brt = new BedrockRuntimeClient({
         credentials:{
             accessKeyId: process.env.AWS_ACCESS_KEY_ID!,
